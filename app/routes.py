@@ -7,6 +7,7 @@ from .models import URL
 def index():
     if request.method == 'POST':
         input_url = request.form['input_url']
-        URL().launch_task('save_url', 'crawling for '+str(input_url))
+        a = URL().launch_task(input_url)
+        print(a)
 
     return render_template('index.html')
