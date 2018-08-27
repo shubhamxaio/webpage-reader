@@ -4,6 +4,9 @@
 	<title>WebPage Reader</title>
 </head>
 <body>
+{% if msg %}
+    <p>{{ msg }}</p>
+{% endif %}
 	<form method="POST">
 		<input type="text" name="input_url" placeholder="Enter URL">
 		<button type="submit">Get Data</button>
